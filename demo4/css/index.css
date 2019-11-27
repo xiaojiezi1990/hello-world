@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Light,microsoft yahei,simsun,sans-serif;;
+}
+
+body {
+    font-size: 13px;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bgBlue {
+    background: #28a7f0;
+}
+.bgYellow {
+    background: #fc9539;
+}
+.bgRed {
+    background: #d95850;
+}
+.bgGreen {
+    background: #4ba982;
+}
+.bgPuple {
+    background: #a26cf1;
+}
+.bgVermi {
+    background: #a83da9;
+}
+
+.box {
+    position: relative;
+    min-height: 500px;
+}
+
+.first {
+    width: 87px;
+    height: 66px;
+    position: absolute;
+    top: 50%;
+    margin-top: -33px;
+    background: url(../images/beijing@2x.png) no-repeat left top;
+    background-size: 87px 66px;
+    line-height: 18px;
+}
+
+.firstText {
+    width: 65px;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 12px;
+}
+
+.list {
+    position: absolute;
+    left: 284px;
+    width: 260px;
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.item {
+    width: 284px;
+    padding: 12px 0;
+    position: relative;
+}
+
+.item1:after,
+.item2:after,
+.item3:after,
+.item4:after {
+    position: absolute;
+    content: '';
+    background: #4467b3;
+}
+
+.item1:after,
+.item2:after {
+    width: 1px;
+    height: 27px;
+}
+
+.item1:after {
+    top: 0px;
+    left: 0;
+}
+
+.item2:after {
+    top: 26px;
+    left: 0;
+}
+
+.item3:after {
+    width: 22px;
+    height: 1px;
+    top: 26px;
+    left: 1px;
+}
+
+.item4:after {
+    width: 22px;
+    height: 1px;
+    right: 0;
+    top: 26px;
+}
+
+.itemText {
+    width: 240px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 14px;
+    margin-left: 22px;
+    position: relative;
+}
+
+.itemText a,
+.itemText span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    line-height: 28px;
+    height: 28px;
+    color: #fff;
+}
+
+.itemText a {
+    width: 170px;
+    margin: 0 10px 0 10px;
+}
+
+.itemText .span1, .itemText .span2,.itemText .span3 {
+    position: absolute;
+    width: 58px;
+    right: 0;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 14px;
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+    top: 0;
+    font-size: 12px;
+}
+
+/*不带加减号*/
+.span1 .ml8 {
+    margin-left: 0;
+    text-align: center;
+}
+
+/*加号*/
+.span2 {
+    background: url(../images/jiahao@2x.png) no-repeat 40px center;
+    background-size: 10px 10px;
+}
+
+/*加号*/
+.span3 {
+    background: url(../images/jianhao@2x.png) no-repeat 40px center;
+    background-size: 10px 2px;
+}
+.span2, .span3 {
+    cursor: pointer;
+}
+.ml8 {
+    margin-left: 8px;
+}
