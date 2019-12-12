@@ -1,0 +1,342 @@
+﻿@charset "UTF-8";
+body, html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 14px;
+	color: #333;
+}
+input, button, textarea {
+	outline: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+ul, ul li, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+table { border-collapse:collapse;  }
+/*链接样式*/
+
+a, a:visited {
+	text-decoration: none;
+	color: #333;
+	outline: none;
+}
+a:hover, a:active {
+	color: #FF7902;
+}
+a:hover>i {
+	color: #ff7902;
+}
+.pointer {
+	cursor: pointer;
+}
+
+/*浮动样式*/
+
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.tc {
+	text-align: center;
+}
+.tl {
+	text-align: left;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+}
+
+/*颜色*/
+.col999 { color: #999;}
+.colyellow {
+	color: #ff7902;
+}
+.white {
+	color: #fff;
+}
+
+/*文字样式*/
+.bold {
+	font-weight: bold;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+
+/*超出宽度文字隐藏*/
+
+.textoverflow {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.textoverflow2 {
+	display: -webkit-box !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+/*隐藏*/
+
+.hide {
+	display: none;
+}
+
+/*位置*/
+
+.pr {
+	position: relative;
+}
+.pa {
+	position: absolute;
+}
+/* 过度动画 */
+
+.transi {
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+/* 鼠标划上放大效果 */
+
+.scale:hover {
+	-webkit-transform: scale(1.2, 1.2);
+	-moz-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+
+/* 鼠标划上上升效果 */
+
+.upward:hover {
+	-webkit-transform: translate(0, -10px);
+	-moz-transform: translate(0, -10px);
+	-ms-transform: translate(0, -10px);
+	-o-transform: translate(0, -10px);
+	transform: translate(0, -10px);
+}
+
+/* 投影效果 */
+
+.shadow {
+	box-shadow: 0px 5px 6px #ccc;
+}
+
+/*宽度为1170的元素*/
+
+.element {
+	width: 1170px;
+	margin: 0 auto;
+	min-width: 1170px;
+}
+
+/*灰色背景*/
+
+.bgf9 {
+	background: #f5f5f5;
+	min-width: 1170px;
+}
+.bgff {
+	background: #fff;
+}
+
+/*--------------此部分为按钮样式--------------*/
+
+.mybtn {
+	font-size: 15px;
+	padding: 10px 30px;
+	border-radius: 20px;
+	text-align: center;
+	background: none;
+	border: none;
+	box-sizing: border-box;
+}
+.mybtn:hover {
+	cursor: pointer;
+}
+.mybtn:active {
+	outline: none;
+}
+.mybtn i {
+	margin-right: 6px;
+}
+
+/*空心,白色描边按钮*/
+
+.btn_white {
+	border: 1px solid #fff;
+	color: #fff;
+}
+.btn_white:hover {
+	background: #fff;
+	color: #FF7902;
+}
+.btn_yel {
+	border: 1px solid #ff7902;
+	color: #ff7902;
+}
+.btn_yel:hover {
+	background: #ff7902;
+	color: #fff;
+}
+
+/*实心,黄色背景按钮*/
+
+.btn_yellow {
+	background: #FF7902;
+	color: #fff;
+}
+.btn_yellow:hover {
+	background: #d96600;
+}
+.btn_green {
+	background: #009688;
+	color: #fff;
+}
+.btn_green:hover {
+	background: #0b776d;
+}
+/*灰色不可用按钮*/
+.btnDisable {
+	background: #ddd;
+	color: #777;
+}
+/*小按钮*/
+.btnSmall {
+	height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    font-size: 14px;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+/*鼠标经过文字变色*/
+
+a.yellow {}
+a.yellow:hover {
+	color: #FF7902;
+}
+a.col7902,a.col7902:hover {
+	color: #ff7902;
+}
+a.hui { color: #999;}
+a.hui:hover { color: #FF7902; }
+.f_orange {
+	color: #ff7902;
+}
+/*浏览、收藏*/
+
+.visitors {
+	margin-left: 20px;
+	color: #666;
+}
+.visitors>i {
+	margin-right: 6px;
+}
+/*间距*/
+
+.mt10 {
+	margin-top: 10px;
+}
+.mt15 {
+	margin-top: 15px;
+}
+.mt20 {
+	margin-top: 20px;
+}
+.mt40 {
+	margin-top: 40px;
+}
+.ml10 {
+	margin-left: 10px;
+}
+.ml20 {
+	margin-left: 20px;
+}
+.ml0 {
+	margin-left: 0;
+}
+.mr10 {
+	margin-right: 10px;
+}
+.mr20 {
+	margin-right: 20px;
+}
+.pt10 {
+	padding-top: 10px;
+}
+.pt15 {
+	padding-top: 10px;
+}
+.pt20 {
+	padding-top: 20px;
+}
+.pt30 { padding-top: 30px;}
+.pt120 { padding-top: 120px;}
+.p20 {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.pb10 {
+	padding-bottom: 10px;
+}
+.pb20 {
+	padding-bottom: 20px;
+}
+.fb {
+	font-weight: bold;
+}
+.ft20 {
+	font-size: 20px;
+}
+.ft22 {
+	font-size: 22px;
+}
+
+.ft26 {
+	font-size: 26px;
+}
+.font16 {
+	font-size: 16px;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <title>登录</title>
+</head>
+
+<body>
+    <div class="logo"></div>
+    <div class="loginWrap">
+        <!--left start-->
+        <div class="swiper-container">
+            <div class="pic">
+                <div class="content">
+                    <img src="images/Bitmap1@2x.png">
+                    <img src="images/Bitmap2@2x.png">
+                    <img src="images/Bitmap3@2x.png">
+                    <img src="images/Bitmap4@2x.png">
+                </div>
+                <ul class="index">
+                    <li class="first"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <!--left end-->
+        <!--right start-->
+        <div class="loginRight">
+            <div class="loginTtitle">登录</div>
+            <form id="form">
+                <div class="loginCenter">
+                    <div class="loginTextA" id="zhanghao">账号</div>
+                    <input type="text" class="loginInput" id="name">
+                    <div class="textLineA"></div>
+                    <div class="loginHelp" id="nameResult"></div>
+                </div>
+                <div class="loginCenter">
+                    <div class="loginTextA" id="mima">密码</div>
+                    <input type="text" class="loginInput" id="pwd">
+                    <div class="textLineA"></div>
+                    <div class="loginHelp" id="pwdResult"></div>
+                </div>
+                <div class="loginCenter">
+                    <div class="loginTextA" id="yam">验证码</div>
+                    <input type="text" class="loginInput yzmInput" id="yzm">
+                    <div class="textLineA" style="width: 209px;"></div>
+                    <div class="loginHelp" id="yzmResult"></div>
+                    <div class="yzm" id="code">此处是验证码图片</div>
+                </div>
+                <div class="loginBottom">
+                    <button class="loginBtn" id="login_button" type="button" onclick="login()">登录</button>
+                    <div class="forgetPassword"><a href="#">忘记密码</a></div>
+                    <div class="register"><a href="#">注册</a></div>
+                </div>
+            </form>
+        </div>
+        <!--right end-->
+    </div>
+    <div class="copyRight">
+        @2019www.inspur.com版权所有 浪潮通用软件有限公司 鲁ICP备12345678号
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+        $(function () {
+            $("#name").val("");
+            $("#pwd").val("");
+            $("#yzm").val("");
+
+            //输入框获得焦点
+            $("#name").focus(function () {
+                $('#name').prev().attr('class', 'loginTextB');
+                $('#name').next().attr('class', 'textLineB');
+            })
+            //输入框失去焦点
+            $("#name").blur(function () {
+                if ($("#name").val() == "") {
+                    //如果没有匹配增加错误样式
+                    $("#nameResult").html('请输入账号');
+                    $('#name').next().attr('class', 'textLineC');
+                    return false;
+                } else {
+                    //如果匹配成功增加正确样式
+                    $('#name').next().attr('class', 'textLineA');
+                    $("#nameResult").html('');
+                    return true;
+                };
+            })
+            // .bind()事件为点击鼠标触发的事件
+            $("#name").bind('input propertychange', function () {
+                if ($("#name").val() == "") {
+                    //如果没有匹配增加错误样式
+                    $("#nameResult").html('请输入账号');
+                    $('#name').next().attr('class', 'textLineC');
+                    return false;
+                } else {
+                    //如果匹配成功增加正确样式
+                    $('#name').next().attr('class', 'textLineA');
+                    $("#nameResult").html('');
+                    return true;
+                };
+            })
+            $("loginTextA").delegate("#zhanghao", "click", function () {
+                $("#name").focus();
+            })
+
+            $("#pwd").focus(function () {
+                $('#pwd').prev().attr('class', 'loginTextB');
+                $('#pwd').next().attr('class', 'textLineB');
+            })
+            $("#pwd").blur(function () {
+                //密码
+                if ($("#pwd").val() == "") {
+                    $("#pwdResult").html('请输入密码');
+                    $('#pwd').next().attr('class', 'textLineC');
+                    return false;
+                } else {
+                    $('#pwd').next().attr('class', 'textLineA');
+                    $("#pwdResult").html('');
+                    return true;
+                }
+            })
+            $("#pwd").bind('input propertychange', function () {
+                if ($("#pwd").val() == "") {
+                    //如果没有匹配增加错误样式
+                    $("#pwdResult").html('请输入密码');
+                    $('#pwd').next().attr('class', 'textLineC');
+                    return false;
+                } else {
+                    //如果匹配成功增加正确样式
+                    $('#pwd').next().attr('class', 'textLineA');
+                    $("#pwdResult").html('');
+                    return true;
+                };
+            })
+
+            $("#yzm").blur(function () {
+                //验证码
+                if ($("#yzm").val() == "") {
+                    $("#yzmResult").html('请输入验证码');
+                    $('#yzm').next().attr('class', 'textLineC');
+                } else {
+                    $('#yzm').next().attr('class', 'textLineA');
+                    $("#yzmResult").html('');
+                    return true;
+                }
+            })
+
+            $("#yzm").focus(function () {
+                $('#yzm').prev().attr('class', 'loginTextB');
+                $('#yzm').next().attr('class', 'textLineB');
+            })
+            $("#yzm").bind('input propertychange', function () {
+                if ($("#yzm").val() == "") {
+                    //如果没有匹配增加错误样式
+                    $("#yzmResult").html('请输入账号');
+                    $('#yzm').next().attr('class', 'textLineC');
+                    return false;
+                } else {
+                    //如果匹配成功增加正确样式
+                    $('#yzm').next().attr('class', 'textLineA');
+                    $("#yzmResult").html('');
+                    return true;
+                };
+            })
+
+        })
+
+        function login() {
+            var username = $("#name");
+            var password = $("#pwd");
+            if (username.val() == "") {
+                $("#nameResult").html('请输入账号');
+                $('#name').next().attr('class', 'textLineC');
+                $("#name").focus();
+                return false;
+            } else if (password.val() == "") {
+                $("#pwdResult").html('请输入密码');
+                $('#pwd').next().attr('class', 'textLineC');
+                $("#pwd").focus();
+                return false;
+            } else if (password.val() == "") {
+                $("#yzmResult").html('请输入密码');
+                $('#yzm').next().attr('class', 'textLineC');
+                $("#yzm").focus();
+                return false;
+            } else {
+                $("#login_button").attr('disabled', 'disabled');
+
+            }
+        }
+        $(document).ready(function () {
+            $("#zhanghao").click(function () {
+                $("#name").focus();
+            });
+            $("#mima").click(function () {
+                $("#pwd").focus();
+            });
+            $("#yam").click(function () {
+                $("#yzm").focus();
+            });
+        });
+    </script>
+</body>
+
+</html>
