@@ -1,7 +1,8 @@
 body {
     width: 100%;
     height: 100%;
-    background: url(../images/bodyBg.png) left top/100% no-repeat;
+    background: url(../images/bodyBg.jpg) left top/100% no-repeat;
+    font-family: PingFangSC,helvetica neue,hiragino sans gb,arial,microsoft yahei ui,microsoft yahei,simsun,sans-serif!important;
 }
 
 .logo {
@@ -35,6 +36,7 @@ body {
     line-height: 45px;
     text-align: center;
     padding: 52px 0 45px 0;
+    font-weight:600;
 }
 
 .loginCenter {
@@ -53,6 +55,7 @@ body {
     padding: 0 12px;
     box-sizing: border-box;
     color: #555;
+    font-size: 15px;
 }
 
 .loginHelp {
@@ -63,10 +66,6 @@ body {
     top: 43px;
 }
 
-.loginNormal .loginHelp,
-.loginCurrent .loginHelp {
-    display: none;
-}
 
 .yzmInput {
     width: 209px;
@@ -130,7 +129,7 @@ body {
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     body {
-        background: url(../images/bodyBg@2x.png) left top/100% no-repeat;
+        background: url(../images/bodyBg@2x.jpg) left top/100% no-repeat;
     }
 
     .logo {
