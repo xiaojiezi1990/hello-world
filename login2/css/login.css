@@ -1,0 +1,149 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: url(../images/bodyBg.png) left top/100% no-repeat;
+}
+
+.logo {
+    width: 292px;
+    height: 60px;
+    position: absolute;
+    background: url(../images/logo.png) no-repeat;
+    left: 46px;
+    top: 27px;
+    z-index: 2;
+}
+
+.loginWrap {
+    width: 430px;
+    height: 540px;
+    background: #fff;
+    box-shadow: 0px 2px 20px 0px rgba(159, 159, 159, 0.19);
+    border-radius: 8px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -215px;
+}
+
+
+.loginTtitle {
+    height: 45px;
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(41, 120, 255, 1);
+    line-height: 45px;
+    text-align: center;
+    padding: 52px 0 45px 0;
+}
+
+.loginCenter {
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.loginInput {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    background: #fff;
+    border:1px solid rgba(225,225,225,1);
+    padding: 0 12px;
+    box-sizing: border-box;
+    color: #555;
+}
+
+.loginHelp {
+    color: #F04E62;
+    position: absolute;
+    font-size: 12px;
+    left: 7px;
+    top: 43px;
+}
+
+.loginNormal .loginHelp,
+.loginCurrent .loginHelp {
+    display: none;
+}
+
+.yzmInput {
+    width: 209px;
+    float: left;
+}
+
+.yzm {
+    width: 127px;
+    height: 40px;
+    float: right;
+    background: #F6F6F6;
+}
+
+.loginBottom {
+    width: 352px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.loginBtn {
+    width: 352px;
+    height: 42px;
+    background: rgba(41, 120, 255, 1);
+    box-shadow: 0px 2px 7px 0px rgba(41, 120, 255, 0.36);
+    border-radius: 3px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.forgetPassword {
+    color: #B7B7B7;
+    float: left;
+    padding-left: 9px;
+    margin-top: 10px;
+}
+
+.forgetPassword a {
+    color: #888;
+}
+
+.register {
+    padding-right: 11px;
+    float: right;
+    margin-top: 10px;
+}
+
+.register a {
+    color: #2978FF;
+}
+
+.copyRight {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    body {
+        background: url(../images/bodyBg@2x.png) left top/100% no-repeat;
+    }
+
+    .logo {
+        background: url(../images/logo@2x.png) no-repeat;
+        background-size: 292px 60px;
+    }
+}
+
+@media screen and (max-height: 680px) {
+    .copyRight {
+        display: none;
+    }
+    .loginWrap {
+        top: 7%;
+    }
+}
